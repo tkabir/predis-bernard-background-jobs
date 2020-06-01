@@ -1,0 +1,23 @@
+{
+    "name": "tkabir/predis-bernard-background-jobs",
+    "description": "A simple PHP job handler using Redis queues and PHP Bernard library",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tanzir Kabir",
+            "email": "mtkabir285@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bernard/bernard":"1.0.0-alpha6",
+        "psr/container": "1.0.*",
+        "symfony/property-access": "^3.3",
+        "predis/predis": "^1.1",
+        "zendframework/zend-servicemanager": "^3.3",
+        "lavary/crunz": "^1.12",
+        "vlucas/phpdotenv": "^4.1"
+    },
+    "prefer-stable": true
+}

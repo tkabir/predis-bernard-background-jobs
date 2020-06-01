@@ -12,7 +12,8 @@ $queueFactory = require __DIR__. '/../app/queueFactory.php';
 
 $queues = [
   'message-queue-1',
-  'message-queue-2'
+  'message-queue-2',
+  'hourly-message-queue'
 ];
 
 $router = new SimpleRouter();
@@ -22,6 +23,10 @@ $router->add('SendMessage1', function(PlainMessage $message) {
 
 $router->add('SendMessage2', function(PlainMessage $message) {
   print_r(PHP_EOL . 'Q2=> sending message: ' . $message['text']);
+});
+
+$router->add('SendMessageHourly', function(PlainMessage $message) {
+  print_r(PHP_EOL . 'Q3=> sending message: ' . $message['text']);
 });
 
 $eventDispatcher = new EventDispatcher();
